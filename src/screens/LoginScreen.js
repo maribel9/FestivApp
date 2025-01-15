@@ -1,25 +1,35 @@
 import React from "react";
 import { View, Text, TextInput, Image, TouchableOpacity } from "react-native";
-import MainStyles from "../styles/MainStyles"; // Ajusta la ruta según la nueva ubicación
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+import MainStyles from "../styles/MainStyles"; 
 
 export default function LoginScreen() {
   return (
     <View style={MainStyles.mainContainer}>
       <View style={MainStyles.logoContainer} />
-      <Text style={MainStyles.title}>Sign in</Text>
+      <Text style={MainStyles.title}>Log in FestivApp</Text>
 
-      {/* Email Input */}
-      <View style={MainStyles.inputContainer}>
+       {/* Email Input */}
+       <View style={MainStyles.inputContainer}>
+        <Icon name="envelope" size={20} color="#adadad" style={MainStyles.inputIcon} />
         <TextInput
           style={MainStyles.textInput}
           placeholder="Enter e-mail address"
           placeholderTextColor="#adadad"
         />
-        <Image
-          source={require("../assets/images/mail-icon.png")}
-          style={MainStyles.inputIcon}
-        />
       </View>
+
+      {/* Password Input */}
+        <View style={MainStyles.inputContainer}>
+          <Icon name="key" size={20} color="#adadad" style={MainStyles.inputIcon} />
+          <TextInput
+            style={MainStyles.textInput}
+            placeholder="Enter password"
+            placeholderTextColor="#adadad"
+            secureTextEntry={true} // Oculta el texto para contraseñas
+          />
+        </View>
 
       {/* Divider */}
       <View style={MainStyles.dividerContainer}>
@@ -30,18 +40,17 @@ export default function LoginScreen() {
 
       {/* Buttons */}
       <TouchableOpacity style={MainStyles.appleButton}>
-        <Image
-          source={require("../assets/images/apple-icon.png")}
-          style={MainStyles.buttonIcon}
-        />
+        <Icon name="envelope" size={20} color="#fff" style={MainStyles.buttonIcon} />
+        <Text style={MainStyles.buttonText}>Continue with E-mail</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={MainStyles.appleButton}>
+        <Icon name="apple" size={20} color="#fff" style={MainStyles.buttonIcon} />
         <Text style={MainStyles.buttonText}>Continue with Apple</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={MainStyles.facebookButton}>
-        <Image
-          source={require("../assets/images/facebook-icon.png")}
-          style={MainStyles.buttonIcon}
-        />
+        <Icon name="facebook" size={20} color="#fff" style={MainStyles.buttonIcon} />
         <Text style={MainStyles.buttonText}>Continue with Facebook</Text>
       </TouchableOpacity>
 
