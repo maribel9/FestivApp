@@ -6,7 +6,6 @@ const MainStyles = StyleSheet.create({
     height: 870,
     backgroundColor: "#fff",
     marginHorizontal: "auto",
-    marginVertical: 0,
     overflow: "hidden",
   },
   logoContainer: {
@@ -24,24 +23,21 @@ const MainStyles = StyleSheet.create({
     color: "#1f1f1f",
   },
   inputContainer: {
-    width: 355,
-    height: 51,
+    width: 340,
+    height: 50,
     borderRadius: 36,
     borderWidth: 1,
     borderColor: "#e9e9e9",
     marginTop: 18,
     marginLeft: 24,
     position: "relative",
-  },
-  inputPlaceholder: {
-    position: "absolute",
-    top: 12,
-    left: 51,
-    fontSize: 16,
-    color: "#adadad",
+    flexDirection: "row", // Alineación horizontal
+    alignItems: "center", // Centrar el ícono y el campo de texto
+    paddingHorizontal: 40,
   },
   textInput: {
-    flex: 1, // Para ocupar el espacio restante
+    flex: 1,
+    height: 40,
     fontSize: 16,
     color: "#000",
   },
@@ -70,7 +66,7 @@ const MainStyles = StyleSheet.create({
     color: "#000",
   },
   appleButton: {
-    width: 356,
+    width: 340,
     height: 54,
     backgroundColor: "#1f1f1f",
     borderRadius: 36,
@@ -81,7 +77,7 @@ const MainStyles = StyleSheet.create({
     justifyContent: "center",
   },
   facebookButton: {
-    width: 356,
+    width: 340,
     height: 54,
     backgroundColor: "#3b5896",
     borderRadius: 36,
@@ -92,7 +88,7 @@ const MainStyles = StyleSheet.create({
     justifyContent: "center",
   },
   googleButton: {
-    width: 356,
+    width: 340,
     height: 54,
     backgroundColor: "#fff9f9",
     borderRadius: 36,
@@ -120,20 +116,70 @@ const MainStyles = StyleSheet.create({
     fontWeight: "500",
   },
   continueButton: {
-    width: 356,
+    width: 340,
     height: 54,
     backgroundColor: "#0373f3",
     borderRadius: 36,
-    marginTop: 238,
+    marginTop: 150,
+    marginLeft: 24,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  continueSIButton: {
+    width: 340,
+    height: 54,
+    backgroundColor: "#0373f3",
+    borderRadius: 36,
+    marginTop: 380,
     marginLeft: 24,
     alignItems: "center",
     justifyContent: "center",
   },
   continueText: {
+    alignItems: "center",
+    justifyContent: "center",
     color: "#fff",
     fontSize: 16,
     fontWeight: "500",
   },
+  // Estilos nuevos para SingInScreen
+  termsContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 20,
+    marginLeft: 24,
+  },
+  termsText: {
+    fontSize: 14,
+    color: "#000",
+    marginLeft: 10,
+  },
+  termsLink: {
+    color: "#0373f3",
+    textDecorationLine: "underline",
+  },
+  signUpTitle: {
+    fontSize: 30,
+    fontWeight: "600",
+    color: "#1f1f1f",
+    marginTop: 20,
+    marginLeft: 24,
+  },
+  checkbox: {
+    width: 20,
+    height: 20,
+    borderWidth: 1,
+    borderColor: "#ccc",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 5,
+    backgroundColor: "white",
+    borderRadius: 3,
+    marginLeft: 8,
+  },
+  checkboxSelected: {
+    backgroundColor: "#0373f3",
+  },  
 });
 
 export default MainStyles;
