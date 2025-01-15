@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+// import { Text, View, ActivityIndicator } from "react-native";
 import LoginScreen from "./src/screens/LoginScreen";
 import SingInScreen from "./src/screens/SingInScreen";
+// import * as Font from "expo-font";
 
 export default function App() {
+    // const [fontsLoaded, setFontsLoaded] = useState(false);
+
+    // useEffect(() => {
+    //   async function loadFonts() {
+    //     await Font.loadAsync({
+    //       // Nombres personalizados para las fuentes
+    //       "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
+    //       "Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
+    //     });
+    //     setFontsLoaded(true);
+    //   }
+    //   loadFonts();
+    // }, []);
+  
+    // if (!fontsLoaded) {
+    //   return (
+    //     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    //       <ActivityIndicator size="large" />
+    //     </View>
+    //   );
+    // }
     // return <LoginScreen />;
     return <SingInScreen />;
   }
