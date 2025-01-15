@@ -17,7 +17,7 @@ To install and run FestivApp on your local machine, follow these steps:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/FestivApp.git
+    git clone [https://github.com/yourusername/FestivApp.git](https://github.com/BrayanBJ27/FestivApp.git)
     ```
 2. Navigate to the project directory:
     ```sh
