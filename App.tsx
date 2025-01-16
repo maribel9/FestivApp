@@ -1,31 +1,18 @@
-import React, { useState, useEffect } from "react";
-// import { Text, View, ActivityIndicator } from "react-native";
-import LoginScreen from "./src/screens/LoginScreen";
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import SingInScreen from "./src/screens/SingInScreen";
-// import * as Font from "expo-font";
+import LoginScreen from "./src/screens/LoginScreen";
+
+const Stack = createStackNavigator();
 
 export default function App() {
-    // const [fontsLoaded, setFontsLoaded] = useState(false);
-
-    // useEffect(() => {
-    //   async function loadFonts() {
-    //     await Font.loadAsync({
-    //       // Nombres personalizados para las fuentes
-    //       "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
-    //       "Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
-    //     });
-    //     setFontsLoaded(true);
-    //   }
-    //   loadFonts();
-    // }, []);
-  
-    // if (!fontsLoaded) {
-    //   return (
-    //     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-    //       <ActivityIndicator size="large" />
-    //     </View>
-    //   );
-    // }
-    // return <LoginScreen />;
-    return <SingInScreen />;
-  }
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="SingIn">
+        <Stack.Screen name="SingIn" component={SingInScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
